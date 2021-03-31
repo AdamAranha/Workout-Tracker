@@ -14,11 +14,14 @@ app.use(express.static("public"))
 app.use('/', require("./routes/page.js"))
 app.use('/', require("./routes/api.js"))
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-})
+mongoose.connect(
+    process.env.MONGODB_URI || 'mongodb://localhost/workout',
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+    }
+);
 
 app.listen(PORT, () => console.log(`App is listening on http://localhost:${PORT}`))
