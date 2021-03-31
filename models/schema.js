@@ -13,14 +13,13 @@ const WorkoutSchema = new Schema(
                 type: {
                     type: String,
                     trim: true,
-                    required: "Enter the exercise type "
+                    required: 'Enter an exercise type'
                 },
                 name: {
                     type: String,
                     trim: true,
-                    required: "Enter theexercise name"
+                    required: 'Enter the name of your exercise'
                 },
-
                 duration: {
                     type: Number,
                 },
@@ -34,12 +33,20 @@ const WorkoutSchema = new Schema(
                     type: Number,
                 },
                 distance: {
-                    type: Number
+                    type: Number,
                 }
             }
         ]
-    });
+    },
 
-var Workout = mongoose.model("Workout", workoutSchema);
+    {
+        toJSON: {
+            virtuals: true
+        }
+    }
 
-module.exports = Workout;
+);
+
+const workout = mongoose.model("Workout", WorkoutSchema);
+
+module.exports = workout;
