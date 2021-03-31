@@ -41,10 +41,12 @@ You are using the MIT license, click on the badge at the top of the page for mor
 ## Questions
 You can find me on [GitHub](https://github.com/AdamAranha) or you can reach me by email [here](mailto:a3aranha@gmail.com).
 
-![Screenshot](assets\newWorkout.PNG)
+[Live Link]()
 
-![Screenshot](assets\TrackerLanding.PNG)
+![Screenshot](assets/newWorkout.PNG)
 
-![Screenshot](assets\workout.PNG)
+![Screenshot](assets/TrackerLanding.PNG)
 
-![Screenshot](assets\dashboard.PNG)
+![Screenshot](assets/workout.PNG)
+
+![Screenshot](assets/dashboard.PNG)
