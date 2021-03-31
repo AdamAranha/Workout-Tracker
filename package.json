@@ -1,0 +1,26 @@
+{
+  "name": "Workout-Tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamAranha/Workout-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamAranha/Workout-Tracker/issues"
+  },
+  "homepage": "https://github.com/AdamAranha/Workout-Tracker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.12.2",
+    "morgan": "^1.10.0"
+  }
+}
