@@ -1,18 +1,32 @@
-const express = require('express');
-const app = express();
-const path = require('path')
+const express = require("express");
+const mongoose = require("mongoose");
+const logger = require("morgan");
 
 const PORT = process.env.PORT || 3000;
 
-// Body Parser middleware
+const app = express();
+
+
+app.use(logger("dev"));
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
-app.use(express.static(path.join(__dirname, '/public')));
-// Routing all endpoints to ./controllers/burger_controller
+app.use(express.static("public"));
 
-// app.get('/', (req, res) => {
-//     res.render('index.handlebars')
-// })
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
 
-app.listen(PORT, () => console.log('Server started on PORT', PORT))
+});
+
+
+
+app.use(require("./routes/api-routes"));
+require("./routes/html-routes")(app);
+
+app.listen(PORT, () => {
+    console.log(`App running on port http://localhost:${PORT}`);
+});
